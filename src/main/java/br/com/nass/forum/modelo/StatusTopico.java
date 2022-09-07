@@ -1,4 +1,4 @@
-package br.com.nass.forum.model;
+package br.com.nass.forum.modelo;
 
 public enum StatusTopico {
 

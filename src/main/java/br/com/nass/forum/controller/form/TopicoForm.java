@@ -5,8 +5,8 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 
-import br.com.nass.forum.model.Curso;
-import br.com.nass.forum.model.Topico;
+import br.com.nass.forum.modelo.Curso;
+import br.com.nass.forum.modelo.Topico;
 import br.com.nass.forum.repository.CursoRepository;
 
 public class TopicoForm {
@@ -20,24 +20,12 @@ public class TopicoForm {
     @NotNull @NotEmpty
     private String nomeCurso;
 
-    public String getTitulo() {
-        return titulo;
-    }
-
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
-    public String getMensagem() {
-        return mensagem;
-    }
-
     public void setMensagem(String mensagem) {
         this.mensagem = mensagem;
-    }
-
-    public String getNomeCurso() {
-        return nomeCurso;
     }
 
     public void setNomeCurso(String nomeCurso) {
@@ -48,4 +36,5 @@ public class TopicoForm {
         Curso curso = cursoRepository.findByNome(nomeCurso);
         return new Topico(titulo, mensagem, curso);
     }
+
 }

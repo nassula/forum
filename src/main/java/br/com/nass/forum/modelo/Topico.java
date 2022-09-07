@@ -1,4 +1,4 @@
-package br.com.nass.forum.model;
+package br.com.nass.forum.modelo;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

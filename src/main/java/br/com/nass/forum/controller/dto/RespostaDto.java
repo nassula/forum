@@ -2,7 +2,7 @@ package br.com.nass.forum.controller.dto;
 
 import java.time.LocalDateTime;
 
-import br.com.nass.forum.model.Resposta;
+import br.com.nass.forum.modelo.Resposta;
 
 public class RespostaDto {
 
@@ -33,4 +33,5 @@ public class RespostaDto {
     public String getNomeAutor() {
         return nomeAutor;
     }
+
 }

@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import br.com.nass.forum.model.StatusTopico;
-import br.com.nass.forum.model.Topico;
+import br.com.nass.forum.modelo.StatusTopico;
+import br.com.nass.forum.modelo.Topico;
 
 public class DetalhesDoTopicoDto {
 
@@ -56,4 +56,5 @@ public class DetalhesDoTopicoDto {
     public List<RespostaDto> getRespostas() {
         return respostas;
     }
+
 }

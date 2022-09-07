@@ -5,7 +5,7 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 
-import br.com.nass.forum.model.Topico;
+import br.com.nass.forum.modelo.Topico;
 import br.com.nass.forum.repository.TopicoRepository;
 
 public class AtualizacaoTopicoForm {
@@ -16,16 +16,8 @@ public class AtualizacaoTopicoForm {
     @NotNull @NotEmpty @Length(min = 10)
     private String mensagem;
 
-    public String getTitulo() {
-        return titulo;
-    }
-
     public void setTitulo(String titulo) {
         this.titulo = titulo;
-    }
-
-    public String getMensagem() {
-        return mensagem;
     }
 
     public void setMensagem(String mensagem) {
@@ -40,4 +32,5 @@ public class AtualizacaoTopicoForm {
 
         return topico;
     }
+
 }

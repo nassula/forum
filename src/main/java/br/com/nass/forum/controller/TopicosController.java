@@ -59,6 +59,7 @@ public class TopicosController {
     }
 
     @PostMapping
+    @SecurityRequirement(name = "bearer-key") //Swagger
     @Transactional
     @CacheEvict(value = "listaDeTopicos", allEntries = true)
     public ResponseEntity<TopicoDto> cadastrar(@RequestBody @Valid TopicoForm form, UriComponentsBuilder uriBuilder) {
@@ -71,7 +72,9 @@ public class TopicosController {
 
     @GetMapping("/{id}")
     public ResponseEntity<DetalhesDoTopicoDto> detalhar(@PathVariable Long id) {
+        System.out.println("Segue o ID - " + id);
         Optional<Topico> topico = topicoRepository.findById(id);
+        System.out.println("Achou ?? - " + topico.isPresent());
         if (topico.isPresent()) {
             return ResponseEntity.ok(new DetalhesDoTopicoDto(topico.get()));
         }
@@ -80,6 +83,7 @@ public class TopicosController {
     }
 
     @PutMapping("/{id}")
+    @SecurityRequirement(name = "bearer-key") //Swagger
     @Transactional
     @CacheEvict(value = "listaDeTopicos", allEntries = true)
     public ResponseEntity<TopicoDto> atualizar(@PathVariable Long id, @RequestBody @Valid AtualizacaoTopicoForm form) {

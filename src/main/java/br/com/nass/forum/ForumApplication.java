@@ -12,7 +12,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class ForumApplication {
 
 	public static void main(String[] args) {
-		//Código usado para encodar uma senha para criação de usuário
+		//Código usado para encodar uma senha para criação de usuário apenas um teste
 		//System.out.println(new BCryptPasswordEncoder().encode("123456"));
 		SpringApplication.run(ForumApplication.class, args);
 	}
